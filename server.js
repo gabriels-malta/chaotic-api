@@ -1,6 +1,6 @@
 const express = require("express"),
   os = require("os");
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 40000;
 
 const server = express();
 const resultOptions = ["DELAY", "ERROR", "DELAY", "SUCCESS", "ERROR"];
