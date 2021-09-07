@@ -3,7 +3,7 @@ Simple API for resilience tests purposes.
 
 A random index will be chosen based on the array below.
 ``` 
-["DELAY", "ERROR", "DELAY", "SUCCESS", "ERROR"]
+["DELAY", "SUCCESS", "ERROR"]
 ```
 
 - ERROR returns the status code 500
