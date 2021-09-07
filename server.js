@@ -1,5 +1,6 @@
 const express = require("express"),
   os = require("os");
+const PORT = process.env.PORT || 5000;
 
 const server = express();
 const resultOptions = ["DELAY", "ERROR", "DELAY", "SUCCESS", "ERROR"];
@@ -38,4 +39,4 @@ server.get("/tryme", (req, res) => {
   res.send(fate);
 });
 
-server.listen(40000, () => console.info(`Server listen to port 40000`));
+server.listen(PORT, () => console.info(`Server listen to port ${PORT}`));
