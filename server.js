@@ -1,9 +1,16 @@
-const express = require("express");
+const express = require("express"),
+  os = require("os");
 
 const server = express();
 const resultOptions = ["DELAY", "ERROR", "DELAY", "SUCCESS", "ERROR"];
 
 server.get("/", (req, res) => {
+  res.status(200);
+  res.write(`Welcome to the Chaotic-API!${os.EOL}Check this out on /tryme`);
+  res.end();
+});
+
+server.get("/tryme", (req, res) => {
   const index = Math.floor(Math.random() * 3);
   const rs = resultOptions[index];
   const fate = {
@@ -17,9 +24,11 @@ server.get("/", (req, res) => {
       fate.message = "Something went wrong.";
       break;
     case "DELAY":
-      const delayTime = Math.floor(Math.random() * 10) * 1000;
+      const delayTime = Math.floor(Math.random() * 10) * 1000 || 10000;
       Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, delayTime);
-      fate.message = `Your response has been delayed for ${delayTime} seconds.`;
+      fate.message = `Your response has been delayed for ${
+        delayTime / 1000
+      } seconds.`;
       break;
   }
 
