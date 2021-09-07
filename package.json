@@ -1,13 +1,17 @@
 {
   "name": "chaos-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple API for resilience tests purposes",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "start-dev": "nodemon server.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "api",
+    "resilience"
+  ],
   "author": "Gabriel Malta",
   "repository": {
     "url": "https://github.com/gabriels-malta/chaotic-api"
