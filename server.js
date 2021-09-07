@@ -17,8 +17,9 @@ server.get("/", (req, res) => {
       fate.message = "Something went wrong.";
       break;
     case "DELAY":
-      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 5000);
-      fate.message = "Your response has been delayed for 5 seconds.";
+      const delayTime = Math.floor(Math.random() * 10) * 1000;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, delayTime);
+      fate.message = `Your response has been delayed for ${delayTime} seconds.`;
       break;
   }
 
