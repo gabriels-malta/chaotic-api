@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaotic API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="my-3">
+            <h1>Chaotic API</h1>
+            <p>This is a simple API for resilience tests purposes</p>
+        </header>
+        <main class="mb-3">
+            <section class="mb-3">
+                <h2>Concept</h2>
+                <p>The main idea is to provide an endpoint that randomly presents
+                    some kind of problem, it could be a dealy or an
+                    internal server error</p>
+            </section>
+            <section class="mb-3">
+                <h3>How-to</h3>
+                <p class="mb-2">
+                    By doing a <i>GET HTTP</i> request to <b>/tryme</b>, you may receive one of the responses below:
+                </p>
+                <ul>
+                    <li>
+                        <b>SUCCESS</b> - { "statusCode": 200, "message": "All good." }
+                    </li>
+                    <li>
+                        <b>DELAY</b> - { "statusCode": 200, "message": "Your response has been delayed." }
+                    </li>
+                    <li>
+                        <b>ERROR</b> - { "statusCode": 500, "message": "Something went wrong." }
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Repo</h3>
+                <p>Feel free to do suggestion through
+                    <a href="https://github.com/gabriels-malta/chaotic-api" target="_blank"
+                        referrerpolicy="no-referrer">GitHub</a>
+                </p>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>
+            Gabriels Malta &copy; 2021
+        </p>
+        <p>
+            <a href="https://www.linkedin.com/in/gsmalta/" target="_blank" referrerpolicy="no-referrer">LinkedIn</a>
+            |
+            <a href="https://github.com/gabriels-malta" target="_blank" referrerpolicy="no-referrer">GitHub</a>
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #000055;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Courier New", Courier, monospace;
+  color: #0f0f0f;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+b {
+  font-weight: 500;
+}
+
+.container {
+  width: 50rem;
+  padding: 1.875rem;
+  position: relative;
+}
+
+.my-3 {
+  margin: 1.875rem auto;
+}
+
+.mb-2 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.875rem;
+}
+
+ul > li {
+  padding-left: 1.25rem;
+  list-style: none;
+}
+
+ul > li:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.875rem;
+}
